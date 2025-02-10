@@ -12,6 +12,10 @@ public class Car {
         this.color = color;
     }
 
+    public Car() {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -34,5 +38,14 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
