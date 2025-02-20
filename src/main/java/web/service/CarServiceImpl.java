@@ -22,9 +22,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getCars(Integer count) {
-        if (count == null) {
-            return carList;
-        } else if (count >= 5) {
+        if (count == null || count >= 5) {
             return carList;
         } else {
             return carList.stream().limit(count).collect(Collectors.toList());
